@@ -50,6 +50,7 @@ python app.py
   Use the following build and start command:
 Build command: pip install -r requirements.txt
 Start command: gunicorn app:app
+---
 ### 🏷️ License
 
 Let me know if you want this customized with your real GitHub URL or LinkedIn.
