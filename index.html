@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gold Price Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Gold Price Predictor</h1>
+        <form action="/predict" method="POST">
+            <label for="date">Select a Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                <p>Predicted Gold Price for {{ date }} is: ₹{{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
